@@ -20,5 +20,15 @@
         "project": ["./tsconfig.json"]
         // tsconfig 파일의 경로를 참조 해줍니다.
         // 기준은 root 입니다.
+    },
+    "plugins": ["react-hooks"],
+    "rules": {
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": [
+            "warn",
+            {
+                "additionalHooks": "useRecoilCallback"
+            }
+        ]
     }
 }
